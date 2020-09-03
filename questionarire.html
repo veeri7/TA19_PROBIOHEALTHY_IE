@@ -1,0 +1,343 @@
+
+<!DOCTYPE html><html class="js" lang="en-US" prefix="og: http://ogp.me/ns#">
+<head itemscope itemtype="http://schema.org/WebSite">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questionaire</title>
+<meta name="description" content="">
+<style>
+body{font-family:sans-serif}
+#row_1 h2, #results h2{text-align:center}
+#row_2{text-align:center;margin:auto;}
+#row_2>div{width:50px;height:50px;line-height:50px;background:#EEE;text-align:center;display:inline-block;margin:10px 5px;border:3px solid #FFF;cursor:pointer}
+#row_3{margin:auto;text-align:center;}
+#row_3>div>div{display:inline-block;text-align:left}
+#row_3>div>div>p{    font-size: 1.6em;
+    min-width: 480px;}
+#row_3>div{margin:auto;text-align:center}
+input[type="radio"]{width:10%;margin:0;padding:0;display:inline-block}
+label{    width: 80%;
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 10px 0 10px 3%;}
+label:hover{background:#f8fff1}
+#row_2>div.act{border: 3px solid #a3adf8;}
+#row_2>div.att{background: #3e4db6;color: #FFF;}
+#row_2>div.natt{}
+#row_4{text-align:center;margin-top:50px}
+#row_4>div{    min-width: 130px;
+    display: inline-block;
+    background: #CCC;
+    padding: 10px 0;
+	color:#FFF;
+    margin: 0 20px;cursor:pointer;
+    box-shadow: 1px 1px 5px #EEE;}
+#row_4>div.btn_active{    background: #4a5fff;}
+#row_1, #row_2, #row_3, #row_4, #row_5 {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+#row_5{text-align:center;margin-top:30px}
+#q_submit{    min-width: 482px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    background: #429d66;
+    padding: 10px 0;
+    color: #FFF;
+    margin: 0 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #EEE;}
+#question_results{margin:auto;text-align:center;margin-top: 50px;}
+#question_results .qr{    max-width: 630px;
+    margin:10px auto;
+    text-align: left;
+}
+#results{display:none}
+#question_results .qr p{    max-width: 503px;
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+    line-height: 30px;}
+#question_results .qr div{width:250px; display:inline-block;float:right}
+#question_results > div > div > div {display:inline-block;width:250px}
+#question_results > div > div > div.left{height:25px;background:#f8b48c}
+#question_results > div > div > div.right{height:25px;background:#78aab2}
+#p_suggest{font-size: 1.3em;
+    text-align: center;}
+#p_suggest span{font-size: 2.2em;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+#p_suggest span.low{color: #1fc65a}
+#p_suggest span.medium{color: #ff9449}
+#p_suggest span.high{color: #ff4040}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head> <body data-rsssl="1" id="blog" itemscope itemtype="http://schema.org/WebPage">
+
+<div id="questionnaire">
+
+<div id="row_1">
+<h2>Questionnaire</h2>
+</div>
+
+<div id="row_2">
+<div id="qn_1" class="act">1</div>
+<div id="qn_2">2</div>
+<div id="qn_3">3</div>
+<div id="qn_4">4</div>
+<div id="qn_5">5</div>
+<div id="qn_6">6</div>
+<div id="qn_7">7</div>
+</div>
+
+
+
+<div id="row_3">
+<div>
+<div id="quest_1">
+	<p>What’s your Age-group of person?</p>
+	<input type="radio" id="q1_1" name="qs_1" value="1">
+	<label for="q1_1">25-35</label><br>
+	<input type="radio" id="q1_2" name="qs_1" value="2">
+	<label for="q1_2">35-45</label><br>
+	<input type="radio" id="q1_3" name="qs_1" value="3">
+	<label for="q1_3">45-55</label><br>
+	<input type="radio" id="q1_4" name="qs_1" value="4">
+	<label for="q1_4">Over 55 years</label>
+</div>
+</div>
+<div>
+<div id="quest_2" style="display:none">
+	<p>What's the frequency of your sex action in a week?</p>
+	<input type="radio" id="q2_1" name="qs_2" value="1">
+	<label for="q2_1">&lt;1 time</label><br>
+	<input type="radio" id="q2_2" name="qs_2" value="2">
+	<label for="q2_2">2-4 times</label><br>
+	<input type="radio" id="q2_3" name="qs_2" value="3">
+	<label for="q2_3">4-6 times</label><br>
+	<input type="radio" id="q2_4" name="qs_2" value="4">
+	<label for="q2_4">Everyday</label>
+</div>
+</div>
+<div>
+<div id="quest_3" style="display:none">
+	<p>Do anyone of your family member has HPV?</p>
+	<input type="radio" id="q3_1" name="qs_3" value="1">
+	<label for="q3_1">Yes</label><br>
+	<input type="radio" id="q3_2" name="qs_3" value="2">
+	<label for="q3_2">No</label>
+	<br><br><br><br><br><br>
+</div>
+</div>
+<div>
+<div id="quest_4" style="display:none">
+	<p>When did you attend GP last time?</p>
+	<input type="radio" id="q4_1" name="qs_4" value="1">
+	<label for="q4_1">Less than a week</label><br>
+	<input type="radio" id="q4_2" name="qs_4" value="2">
+	<label for="q4_2">Before Three Months</label><br>
+	<input type="radio" id="q4_3" name="qs_4" value="3">
+	<label for="q4_3">Last six Months</label><br>
+	<input type="radio" id="q4_4" name="qs_4" value="4">
+	<label for="q4_4">More than a Year</label>
+</div>
+</div>
+<div>
+<div id="quest_5" style="display:none">
+	<p>Do you have any sort of health concern?</p>
+	<input type="radio" id="q5_1" name="qs_5" value="1">
+	<label for="q5_1">Allergies</label><br>
+	<input type="radio" id="q5_2" name="qs_5" value="2">
+	<label for="q5_2">Bleeding</label><br>
+	<input type="radio" id="q5_3" name="qs_5" value="3">
+	<label for="q5_3">Others</label><br>
+	<input type="radio" id="q5_4" name="qs_5" value="4">
+	<label for="q5_4">Not at all</label>
+</div>
+</div>
+<div>
+<div id="quest_6" style="display:none">
+	<p>How frequently you consume alcohol?</p>
+	<input type="radio" id="q6_1" name="qs_6" value="1">
+	<label for="q6_1">Daily</label><br>
+	<input type="radio" id="q6_2" name="qs_6" value="2">
+	<label for="q6_2">Weekly</label><br>
+	<input type="radio" id="q6_3" name="qs_6" value="3">
+	<label for="q6_3">Once in a month</label><br>
+	<input type="radio" id="q6_4" name="qs_6" value="4">
+	<label for="q6_4">Not at all</label>
+</div>
+</div>
+<div>
+<div id="quest_7" style="display:none">
+	<p>Do you participate in exercise regularly?</p>
+	<input type="radio" id="q7_1" name="qs_7" value="1">
+	<label for="q7_1">Yes</label><br>
+	<input type="radio" id="q7_2" name="qs_7" value="2">
+	<label for="q7_2">No</label>
+	<br><br><br><br><br><br>
+</div>
+</div>
+</div>
+
+
+	
+<div id="row_4">
+<div id="prev_q">Previous</div>
+<div id="prev_n">Next</div>
+<div id="prev_s" class="btn_active">Skip</div>
+</div>
+
+<div id="row_5">
+<div id="q_submit">Submit</div>
+</div>
+
+</div>
+
+<div id="results">
+<h2>Questionnaire Results</h2>
+<div id="question_results">
+<div class="qr"><p id="qr1"></p><div id="qr1_score"></div></div>
+<div class="qr"><p id="qr2"></p><div id="qr2_score"></div></div>
+<div class="qr"><p id="qr3"></p><div id="qr3_score"></div></div>
+<div class="qr"><p id="qr4"></p><div id="qr4_score"></div></div>
+<div class="qr"><p id="qr5"></p><div id="qr5_score"></div></div>
+<div class="qr"><p id="qr6"></p><div id="qr6_score"></div></div>
+<div class="qr"><p id="qr7"></p><div id="qr7_score"></div></div>
+</div>
+<p id="p_suggest">Our suggestion that you should take a vaccine is </p>
+</div>
+
+<script>
+var q_weights = [8, 10, 10, 7, 7, 6, 6];
+var q_options_weights = [[5,8,7,7], [5,6,7,8], [10,1], [4,6,7,8], [7,8,6,3], [8,6,4,1], [3,6]];
+var q_options_answers = [["You are 25-35 years of age", "You are 35-45 years of age", "You are 45-55 years of age", "You are over 55 years of age"],
+["Frequency of sex action is <1 time in a week", "Frequency of sex action is 2-4 times in a week", "Frequency of sex action is 4-6 times in a week", "Frequency of sex action is everyday in a week", ],
+["Your family member has HPV", "No family member has HPV"],
+["Last attended GP in less than a week","Last attended GP is before three weeks","Last attended GP is in six months","Last attended GP is more than a year"],
+["I have allergies", "I have bleeding", "I have some other health concern", "I do not have any health concern"],
+["I consume alcohol daily", "I consume alcohol once in a week", "I consume alcohol once in a month", "I do not consume alcohol at all"],
+["I excercise regularly", "I do not excercise regularly"]
+];
+var prev_question = 1;
+$("#row_2 > div").click(function() {
+	var question_nubmer = parseInt($( this ).text());
+	$("#quest_"+prev_question).hide();
+	
+	var isQuestionOptionSelected = $("input[name=qs_"+prev_question+"]").is(':checked');
+	if (!isQuestionOptionSelected) {
+		$("#qn_"+prev_question).attr("class", "natt");
+	}
+	
+	prev_question = question_nubmer;
+	$("#quest_"+question_nubmer).show();
+	//get the status of currently selected question
+	
+	$("#qn_"+question_nubmer).attr("class", "act");
+	setColors();
+});
+$('#row_3 input').click(function() {
+	var isQuestionOptionSelected = $("input[name=qs_"+prev_question).is(':checked');
+	if (isQuestionOptionSelected) {
+		$("#qn_"+prev_question).attr("class", "att");
+	} else {
+		$("#qn_"+prev_question).attr("class", "natt");
+	}
+	setColors();
+});
+$("#prev_q").click(function() {
+	if(prev_question > 1 && $( this ).attr("class")=="btn_active") {
+		$("#qn_"+(prev_question-1)).click();
+	}
+});
+$("#prev_n").click(function() {
+	if(prev_question < 7 && $( this ).attr("class")=="btn_active") {
+		$("#qn_"+(prev_question+1)).click();
+	}
+});
+$("#prev_s").click(function() {
+	if(prev_question < 7 && $( this ).attr("class")=="btn_active") {
+		$("#qn_"+(prev_question+1)).click();
+	}
+});
+var submitConfirm = false;
+$("#q_submit").click(function() {
+	var i;
+	var answered = 0;
+	for (i = 1; i <= 7; i++) {
+		if($("input[name=qs_"+i+"]").is(':checked')){
+			answered += 1;
+		}
+	}
+	if (answered == 7 || submitConfirm) {
+		var score = 0;
+		for (i = 1; i <= 7; i++) {
+			if($("input[name=qs_"+i+"]").is(':checked')){
+				score += q_weights[i-1]*q_options_weights[i-1][parseInt($("input[name=qs_"+i+"]:checked").val()) - 1];
+			}
+		}
+		score /= 10;
+		score /= answered;
+		console.log(score);
+		$( "#questionnaire" ).fadeOut( "slow", function() {
+			for (i = 1; i <= 7; i++) {
+				if($("input[name=qs_"+i+"]").is(':checked')){
+					var selectedOption = parseInt($("input[name=qs_"+i+"]:checked").val());
+					var score_temp = q_weights[i-1]*q_options_weights[i-1][parseInt($("input[name=qs_"+i+"]:checked").val()) - 1];
+					$("#qr"+i).text(q_options_answers[i-1][selectedOption-1]);
+					$("#qr"+i+"_score").append('<div class="right" style="width:'+(100-score_temp)+'%"></div><div class="left" style="width:'+score_temp+'%"></div>');
+				} else {
+					
+				}
+			}
+			if(score < 3.3) {
+				$("#p_suggest").append('<span class="low">LOW</span>');
+			}
+			if(score > 3.3 && score < 4.6) {
+				$("#p_suggest").append('<span class="medium">MEDIUM</span>');
+			}
+			if(score > 4.6) {
+				$("#p_suggest").append('<span class="high">HIGH</span>');
+			}
+			$( "#results" ).fadeIn( "fast", function() {
+				
+			});
+		});
+	}
+	else {
+		$("#q_submit").text("Havn't answered all. Submit anyway!");
+		submitConfirm = true;
+	}
+});
+
+function setColors(){
+	if(prev_question > 1) {
+		$("#prev_q").attr("class", "btn_active");
+	} else {
+		$("#prev_q").removeAttr("class");
+	}
+	if(prev_question < 7) {
+		$("#prev_s").attr("class", "btn_active");
+	} else {
+		$("#prev_s").removeAttr("class");
+	}
+	if($("input[name=qs_"+prev_question+"]").is(':checked')){
+		$("#prev_n").attr("class", "btn_active");
+		$("#prev_s").removeAttr("class");
+	} else {
+		$("#prev_n").removeAttr("class");
+	}
+}
+
+</script>
+</body> </html>
