@@ -28,3 +28,19 @@ From our website, following insights can be taken out:
  All those insights are observed through some interactive visualisations made using plotly under "HPV Facts" Section.
  
  Few infographics are also made on Types of HPV & How it is spread?
+
+Iteration 3:
+
+Final iteration we had used bootstrap template for our web-design where it will give detail insights about Human Papilloma Virus (HPV) from various sections,
+A detailed video is made under "About Us" Section which gives the information about the usage of our website.
+From our website, following insights can be taken out:
+1. HPV Overview
+2. Types of HPV
+3. How HPV Spread?
+4. Symptoms 
+5. Prevention
+6. Vaccines
+7. Self-Assessed Questionnaire
+8. GP Search
+
+All those insights are observed through some interactive visualisations made using plotly & geopy under "HPV Facts" & "HPV Vaccines" Section.
