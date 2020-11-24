@@ -44,3 +44,9 @@ From our website, following insights can be taken out:
 8. GP Search
 
 All those insights are observed through some interactive visualisations made using plotly & geopy under "HPV Facts" & "HPV Vaccines" Section.
+
+This product has been developed by 4 members from Monash University.
+1. Vivek Veeri
+2. Jeremy Howard
+3. Mohan Lyu
+4. Ran Yi
